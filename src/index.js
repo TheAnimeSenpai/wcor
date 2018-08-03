@@ -17,6 +17,9 @@ import './assets/css/default/style.css';
 import './assets/css/default/style-responsive.css';
 import './assets/css/default/theme/default.css';
 
+//basic css files...
+import './assets/plugins/toastr/toastr.min.css';
+
 ReactDOM.render(
     <Router history={history}>
         <App />

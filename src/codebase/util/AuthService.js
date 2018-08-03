@@ -2,7 +2,7 @@ import { EventEmitter } from 'events'
 import { isTokenExpired } from './jwtHelper'
 import { login } from '../../api/AuthApi';
 import history from '../../history';
-import { notifySuccess, notifyError } from './notification';
+import { toastrnotify, swalnotify, NotificationType } from './notification';
 
 export default class AuthService extends EventEmitter {
 
@@ -20,7 +20,7 @@ export default class AuthService extends EventEmitter {
         login(username, password).then(function (result) {
             if (result.status === 'error') {
                 //error occured...return...
-                //notifyError('Failed', result.message);
+                toastrnotify(result.message, 'Failed', NotificationType.Error);
                 return false;
             }
             else {
