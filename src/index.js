@@ -10,11 +10,11 @@ import registerServiceWorker from './registerServiceWorker';
 import { Router } from 'react-router-dom';
 import history from './history';
 
-//support css files...
+// //support css files...
 import './assets/plugins/font-awesome/5.0/css/fontawesome-all.min.css';
-import './assets/plugins/animate/animate.min.css';
-import './assets/css/default/style.min.css';
-import './assets/css/default/style-responsive.min.css';
+import './assets/plugins/animate/animate.css';
+import './assets/css/default/style.css';
+import './assets/css/default/style-responsive.css';
 import './assets/css/default/theme/default.css';
 
 ReactDOM.render(

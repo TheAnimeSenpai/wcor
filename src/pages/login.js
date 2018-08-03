@@ -1,15 +1,31 @@
 import React, { Component } from 'react';
 
+import bg from '../assets/img/login-bg/login-bg-16.jpg';
 class Login extends Component {
+    constructor() {
+        super();
+        this.state = {
+            fadeIn: false
+        };
+    }
+
+    componentDidMount() {
+        this.setState({
+            fadeIn: true
+        });
+    }
+
     render() {
         return (
             <div>
                 <div className="login-cover">
-                    <div className="login-cover-image"></div>
+                {/* <img src={bg} /> */}
+                    <div className="login-cover-image" style={{backgroundImage: "url('" + bg + "')"}}></div>
                     <div className="login-cover-bg"></div>
                 </div>
-                <div id="page-container" className="fade">
-                    <div className="login login-v2" data-pageload-addclass="animated fadeIn">
+
+                <div id="page-container gilbert-was-right" className="animatedx fadeIn">
+                    <div className="login login-v2">
                         <div className="login-header">
                             <div className="brand">
                                 <span className="logo"></span> <b>Color</b> Admin
