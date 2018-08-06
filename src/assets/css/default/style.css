@@ -158,9 +158,9 @@ table.dataTable thead .sorting_desc_disabled:after {
     box-shadow: 0 0 24px rgba(0, 0, 0, .15)
 }
 
-.page-without-sidebar .content {
+/* .page-without-sidebar .content {
     margin-left: 0
-}
+} */
 
 .page-with-right-sidebar .content {
     margin-left: 0;
