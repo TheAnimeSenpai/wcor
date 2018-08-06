@@ -13,28 +13,40 @@ class Topmenu extends Component {
             <div id="top-menu" className="top-menu topmenu">
                 <ul className="nav">
                     <li className="navItem">
-                        <a>
+                        <Link to="/home">
                             <i className="fas fa-home fa-2x"></i>
                             <span>Home</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="navItem">
-                        <a>
-                            <i className="fas fa-book fa-2x"></i>
+                        <Link to="/budget">
+                            <i className="fas fa-wallet fa-2x"></i>
                             <span>Budget</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="navItem">
-                        <a>
+                        <Link to="/reports">
                             <i className="far fa-chart-bar fa-2x"></i>
                             <span>Reports</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="navItem">
-                        <a>
+                        <Link to="/accounts">
                             <i className="fas fa-university fa-2x"></i>
                             <span>Accounts</span>
+                        </Link>
+                    </li>
+                    <li className="navItem has-sub">
+                        <a>
+                            <i className="fas fa-cogs fa-2x"></i>
+                            <span>Extras</span>
                         </a>
+                        <ul className="sub-menu">
+                            <li><Link to="/extras/settings">Settings</Link></li>
+                            <li><Link to="/extras/backrest">Backup / Restore</Link></li>
+                            <li><Link to="/extras/categories">Categories</Link></li>
+                            <li><Link to="/extras/port">Import / Export</Link></li>
+                        </ul>
                     </li>
                     <li className="menu-control menu-control-left">
                         <a href="#" data-click="prev-menu">
