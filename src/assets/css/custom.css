@@ -1,0 +1,9 @@
+.topmenu {
+    height: auto;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .navItem span {
+    font-size: 14px;
+  }
