@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import history from '../history';
 
 import Home from './home';
+import Header from './shared/header';
+import Topmenu from './shared/topmenu';
 
 import AuthService from '../codebase/util/AuthService'
 
@@ -24,7 +26,8 @@ class Dashboard extends Component {
     render() {
         return (
             <div>
-                Dashboard section...
+                <Header />
+                <Topmenu />
                 <Route exact path="/" component={Home}/>
                 <Route path="/home" component={Home}/>
             </div>
