@@ -12,16 +12,16 @@ function login(username, password) {
     }).then(function(response) {
         return {
             status : 'success',
-            token : response.headers['x-auth-token'],
+            token : response.headers['auth-token'],
             profile : response.data
         }
     }).catch(function(error) {
-        if(error.status >= 300 || error.status < 200) {
+        var errorData = error.response.data;
+        if(errorData.status >= 300 || errorData.status < 200) {
             //invalid details supplied or server error...return...
-            console.log(error.response.data);
             return {
                 status : 'error',
-                message : error.response.data.description
+                message : errorData.message
             };
         }
         return {

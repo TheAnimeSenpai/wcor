@@ -41,7 +41,6 @@ export default class AuthService extends EventEmitter {
     }
 
     setToken(accessToken) {
-        console.log(accessToken);
         // Saves user access token into local storage
         localStorage.setItem('access_token', accessToken);
     }
