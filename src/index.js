@@ -11,7 +11,7 @@ import { Router } from 'react-router-dom';
 import history from './history';
 
 // //support css files...
-import './assets/plugins/font-awesome/5.0/css/fontawesome-all.min.css';
+import './assets/plugins/font-awesome/5.0/css/all.min.css';
 import './assets/plugins/animate/animate.css';
 import './assets/css/default/style.css';
 import './assets/css/default/style-responsive.css';

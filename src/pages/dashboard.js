@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import history from '../history';
 
 import Home from './home';
 import Header from './shared/header';
 import Topmenu from './shared/topmenu';
+import Port from './extras/port';
+import Category from './extras/category';
 
-import AuthService from '../codebase/util/AuthService'
+import AuthService from '../codebase/util/AuthService';
+
+import bg from '../assets/img/bg/bg2.jpg';
 
 const auth = new AuthService();
 
@@ -25,11 +29,18 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div>
+            <div id="page-container" className="page-container page-without-sidebar page-header-fixed page-with-top-menu">
                 <Header />
                 <Topmenu />
-                <Route exact path="/" component={Home}/>
-                <Route path="/home" component={Home}/>
+                <div className="background2" style={{ backgroundImage: "url('" + bg + "')" }}></div>
+                <div id="content" className="xcontent content">
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route path="/home" component={Home} />
+                        <Route path="/extras/import-export" component={Port} />
+                        <Route path="/extras/categories" component={Category} />
+                    </Switch>
+                </div>
             </div>
         );
     }
