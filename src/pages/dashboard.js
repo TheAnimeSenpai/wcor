@@ -6,7 +6,7 @@ import Home from './home';
 import Header from './shared/header';
 import Topmenu from './shared/topmenu';
 import Port from './extras/port';
-import Category from './extras/category';
+import Categories from './extras/categories';
 
 import AuthService from '../codebase/util/AuthService';
 
@@ -16,7 +16,7 @@ const auth = new AuthService();
 
 class Dashboard extends Component {
 
-    constructor(props) {
+    constructor(props) { 
         super(props);
     }
 
@@ -29,7 +29,7 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div id="page-container" className="page-container page-without-sidebar page-header-fixed page-with-top-menu">
+            <div id="page-container" className="page-container page-without-sidebar page-header-fixed page-with-top-menu"> 
                 <Header />
                 <Topmenu />
                 <div className="background2" style={{ backgroundImage: "url('" + bg + "')" }}></div>
@@ -38,7 +38,7 @@ class Dashboard extends Component {
                         <Route exact path="/" component={Home} />
                         <Route path="/home" component={Home} />
                         <Route path="/extras/import-export" component={Port} />
-                        <Route path="/extras/categories" component={Category} />
+                        <Route path="/extras/categories" component={Categories} />
                     </Switch>
                 </div>
             </div>
